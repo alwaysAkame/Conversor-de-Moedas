@@ -21,7 +21,7 @@ function convert() {
         currency: "BRL"
     }).format(inputValue);
 
-    if (convertFor.value == "dolar") {
+    if (convertOf.value == "real" && convertFor.value == "dolar") {
         valueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
@@ -34,9 +34,10 @@ function convert() {
 
         const convertOfIcon = document.querySelector(".convertOfIcon").src = "./assets/brazil_icone.png";
         moneyConverted.innerHTML = "Real";
+        moneyToConvert.innerHTML = "Real";
     }
 
-    if (convertFor.value == "euro") {
+    if (convertOf.value == "real" && convertFor.value == "euro") {
         valueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
@@ -49,6 +50,7 @@ function convert() {
 
         const convertOfIcon = document.querySelector(".convertOfIcon").src = "./assets/brazil_icone.png";
         moneyConverted.innerHTML = "Real";
+        moneyToConvert.innerHTML = "Real";
     }
 
     if (convertOf.value == "real" && convertFor.value == "real") {
@@ -65,6 +67,7 @@ function convert() {
 
         const convertOfIcon = document.querySelector(".convertOfIcon").src = "./assets/brazil_icone.png";
         moneyConverted.innerHTML = "Real";
+        moneyToConvert.innerHTML = "Real";
     }
 
     if (convertOf.value == "real" && convertFor.value == "bitcoin") {
